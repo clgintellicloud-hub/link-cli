@@ -5,6 +5,7 @@ import { createDemoCli } from './commands/demo';
 import { createMppCli } from './commands/mpp';
 import { createOnboardCli } from './commands/onboard';
 import { createPaymentMethodsCli } from './commands/payment-methods';
+import { createServeCli } from './commands/serve';
 import { createShippingAddressCli } from './commands/shipping-address';
 import { createSpendRequestCli } from './commands/spend-request';
 import { createUserInfoCli } from './commands/user-info';
@@ -115,6 +116,7 @@ cli.command(
     authStorage,
   ),
 );
+cli.command(createServeCli(cli));
 
 cli.serve();
 
